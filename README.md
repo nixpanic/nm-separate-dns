@@ -23,10 +23,18 @@ server should (mostly) not require additional dependencies.
 
 ## Installation
 
-1. Copy `resolv.conf.dnsmasq` to `/etc/`.
-
-2. Copy the `90-update-resolv.conf` script to
+1. Copy the `90-update-resolv.conf` script to
    `/etc/NetworkManager/dispatcher.d/`.
+
+2. Create the `/etc/dnsmasq.d/localhost.conf` with the following content
+
+   ```
+   no-resolv
+   no-poll
+   interface=lo
+   no-dhcp-interface=lo
+   bind-interfaces
+   ```
 
 3. Install and enable `dnsmasq`:
 
