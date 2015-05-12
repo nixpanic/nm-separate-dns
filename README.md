@@ -24,7 +24,7 @@ server should (mostly) not require additional dependencies.
 ## Installation
 
 1. Copy the `90-update-resolv.conf` script to
-   `/etc/NetworkManager/dispatcher.d/`.
+   `/etc/NetworkManager/dispatcher.d/` and make it executable.
 
 2. Create the `/etc/dnsmasq.d/localhost.conf` with the following content
 
