@@ -1,14 +1,15 @@
-%define		commit v20150324
+%define		date 20150530
+%define		gittag v%{date}
 
 Name:		nm-separate-dns
-Version:	20150324
+Version:	%{date}
 Release:	1%{?dist}
 Summary:	Generate dnsmasq config files per connection to separate dns queries
 
 Group:		System Environment/Base
 License:	GPLv2
 URL:		https://github.com/nixpanic/nm-separate-dns
-Source0:	https://github.com/nixpanic/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:	https://github.com/nixpanic/%{name}/archive/%{gittag}/%{name}-%{gittag}.tar.gz
 
 Requires:	NetworkManager, dnsmasq
 
@@ -19,7 +20,7 @@ and need to connect to a VPN which serves a different private domain.
 
 
 %prep
-%setup -qn %{name}-%{commit}
+%setup -qn %{name}-%{date}
 
 
 %build
@@ -37,6 +38,9 @@ install -D -m 0644 nm-separate-dns.conf %{buildroot}/etc/dnsmasq.d/nm-separate-d
 
 
 %changelog
+* Sat May 30 2015 Niels de Vos <niels@nixpanic.net> - 20150530-1
+- Correct building from the git-tag
+
 * Tue Mar 24 2015 Niels de Vos <niels@nixpanic.net> - 20150324-1
 - Add nm-separate-dns.conf as dnsmasq config file
 
