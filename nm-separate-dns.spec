@@ -1,4 +1,4 @@
-%define		date 20150530
+%define		date 20150531
 %define		gittag v%{date}
 
 Name:		nm-separate-dns
@@ -38,6 +38,9 @@ install -D -m 0644 nm-separate-dns.conf %{buildroot}/etc/dnsmasq.d/nm-separate-d
 
 
 %changelog
+* Sun May 31 2015 Niels de Vos <niels@nixpanic.net> - 20150530-1
+- Make this work on Fedora 22
+
 * Sat May 30 2015 Niels de Vos <niels@nixpanic.net> - 20150530-1
 - Correct building from the git-tag
 
