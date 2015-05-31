@@ -22,7 +22,7 @@ configuration. Because many workstations have `dnsmasq` installed already (it
 is a dependency for `libvirt`), using `dnsmasq` for configuring a local DNS
 server should (mostly) not require additional dependencies.
 
-'''Note:''' Before using this solution, test if the integrated `dnsmasq`
+**Note:** Before using this solution, test if the integrated `dnsmasq`
 feature of [NetworkManager][nm] is sufficient for your environment.
 NetworkManager can maintain a `dnsmasq` configuration and (re)start the
 `dnsmasq` daemon too.  All this requires, is a configuration option in
@@ -94,6 +94,6 @@ The latest version of this script is available in its [github
 repository][gitrepo].
 
 [dnsmasq]: http://www.thekelleys.org.uk/dnsmasq/doc.html
-[nm] https://wiki.gnome.org/NetworkManager
+[nm]: https://wiki.gnome.org/NetworkManager
 [blogpost]: http://blog.nixpanic.net/2013/03/use-dnsmasq-for-separating-dns-queries.html
 [gitrepo]: https://github.com/nixpanic/nm-separate-dns
