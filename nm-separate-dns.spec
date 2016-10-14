@@ -1,4 +1,4 @@
-%define		date 20150531
+%define		date 20161014
 %define		gittag v%{date}
 
 Name:		nm-separate-dns
@@ -12,6 +12,7 @@ URL:		https://github.com/nixpanic/nm-separate-dns
 Source0:	https://github.com/nixpanic/%{name}/archive/%{gittag}/%{name}-%{gittag}.tar.gz
 
 Requires:	NetworkManager, dnsmasq
+BuildArch:	noarch
 
 %description
 Automatically configure `dnsmasq` to separate DNS queries based on the domain
@@ -38,6 +39,9 @@ install -D -m 0644 nm-separate-dns.conf %{buildroot}/etc/dnsmasq.d/nm-separate-d
 
 
 %changelog
+* Fri Oct 14 2016 Niels de Vos <niels@nixpanic.net> - 20161014-1
+- Build as noarch
+
 * Sun May 31 2015 Niels de Vos <niels@nixpanic.net> - 20150530-1
 - Make this work on Fedora 22
 
