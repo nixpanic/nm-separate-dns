@@ -1,4 +1,4 @@
-%define		date 20161014
+%define		date 20171116
 %define		gittag v%{date}
 
 Name:		nm-separate-dns
@@ -39,6 +39,10 @@ install -D -m 0644 nm-separate-dns.conf %{buildroot}/etc/dnsmasq.d/nm-separate-d
 
 
 %changelog
+* Thu Nov 16 2017 Niels de Vos <niels@nixpanic.net> - 20171116-1
+- Fix check for duplicate domains (Marek Kasik)
+- Don't overwrite debug logs (Marek Kasik)
+
 * Fri Oct 14 2016 Niels de Vos <niels@nixpanic.net> - 20161014-1
 - Build as noarch
 
